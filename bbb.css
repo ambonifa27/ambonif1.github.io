@@ -5,50 +5,41 @@
 :root{
     --mainColor: #7eb0ce;
     --secondColor: #B85C68;
-    --thirdColor: #B8A9C9;
+    --thirdColor: #b8afc2;
     --fourthColor: #242124;
-    --FF1:"Cormorant Garamond", sans-serif;
+    --FF1:"Pompiere", sans-serif;
     --FF2: "Poiret One", sans-serif;
+    --FF3: "Lavishly Yours", sans-serif;
 }
 body{
     background-color: var(--mainColor);
 }
-.bbb_header{/*this part focuses on position of the logo and the logo name*/
-    display:flex;
-    align-items: center;
-    gap: 30px;
-    margin: 0;
+.header{/*this part focuses on position of the logo and the logo name*/
+    text-align: center;
+    margin: 25px 0 60px 0;
     padding:0;
 }
-.bbb_header img {/*this section focuses on the logo image*/
+.header img {/*this section focuses on the logo image*/
     margin-left: 200px;
     margin-bottom: 10px;
     background-color: black;
 }
-
-.bbb_name{/*this section focuses on the position of the logo name itself*/
-    margin:0px 0px 45px 425px;
-    padding:0;
-}
-.bbb_name1{/*this section focuses on the first name of the logo(BLUEBELL)*/
-    font-size: 40px;
-    color: #3a363a;
-    font-family: var(--FF1);
-    text-shadow: 2px 2px 1px var(--thirdColor);
+.name{/*this section focuses on the position of the logo name itself*/
+    font-size: 5em;
+    color: #242124;
+    font-family: var(--FF3);
+    text-shadow: 2px 2px 5px white;
     padding:0;
     margin:0;
     letter-spacing: 2px;
+    text-decoration: none;
 }
-.bbb_name2{/*This focuses on the the second name of the logo(BAKERY)*/
-    font-size: 20px;
-    color: #3a363a;
-    font-family: var(--FF1);
-    text-shadow: 2px 2px 1px var(--thirdColor);
-    padding:0;
-    margin:0px 0px 0px 60px;
+.name:hover {
+        color: var(--secondColor);
+
 }
 
-.bbb_logo{/*This focuses on the logo image*/
+.logo{
     width: 150px;
     height:150px;
     border-radius: 100px;
@@ -57,13 +48,16 @@ body{
     border:1px solid #242124;
 }
 
-.bbb_tabs {/*This focuses on the NAV divs*/
-    padding: 25px;
-    max-width: 1922px;
+.tabs {/*This focuses on the NAV divs*/
+    padding: 30px;
+    max-width: 1907px;
     margin: -55px -10px;
-    border-bottom: 15px solid #3a363a;
+    position: sticky;
+    z-index:100;
+    top:0;
+    background-color: var(--fourthColor);
 }
-.bbb_tabs ul{/*this focuses on the nav links*/
+.tabs ul{/*this focuses on the nav links*/
     display: flex;
     justify-content: center;
     gap: 100px;
@@ -73,21 +67,20 @@ body{
     list-style: none;
 }
 
-.bbb_tabs a {/*this focuses on the nav links text*/
-    color: var(--fourthColor);
+.tabs a {/*this focuses on the nav links text*/
+    color: white;
     text-decoration: none;
     border-radius: 8%;
     font-size: 20px;
     font-family: var(--FF2);
     font-weight: bolder;
-    text-shadow: 2px 2px 1px #B8A9C9;
+    text-shadow: -2px -2px 5px var(--thirdColor);
 }
 
-.bbb_tabs a:hover {
-    color: white;
+.tabs a:hover {
+    color: var(--secondColor);
 }
-/*This i learned on my own, its for the flowing banner on top of the page, but im not sure if it will work properly
-.bbb_banner {
+.banner {
     max-width: 1922px;
     overflow: hidden;
     background-color: var(--fourthColor);
@@ -113,61 +106,328 @@ body{
         transform: translateX(-600px);
     }
 }
-*/
 
-.bbb_main-content{/*This focuses on the main content for the position of the welcome section and the hero image*/
+
+.main-content{/*This focuses on the main content for the position of the welcome section and the hero image*/
     margin: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
     align-items: center;
-    background-color: white;
-    padding:50px;
-    border-radius: 50px;
-    border:1px solid var(--fourthColor);
-    box-shadow: 0px 1px 10px var(--secondColor);
+    background-color: rgb(237, 237, 230);
+    padding:25px;
+    border-radius: 10px;
+    border:5px solid var(--fourthColor);
+    box-shadow: 0px 1px 10px var(--fourthColor);
 }
 
-.bbb_mc_header{ 
+.mc_header{ /*This focuses on the welcome text in main content */
     color: var(--fourthColor);
     font-family: var(--FF2);
     font-size: 50px;
-    text-shadow: 2px 2px 1px #B8A9C9;
-
+    text-shadow: -2px -2px 1px #B8A9C9;
+    text-align: center;
 }
 
-p{
+.mc_p{/*this focuses on the the text under the welcome header*/
     font-family: var(--FF1);
     color:var(--fourthColor);
-    text-align: left;
-    font-size: 25px;
-    border: 1px solid white;
-    border-radius:25px;
+    font-size: 40px;
     padding:20px;
     font-weight: bold;
+    text-align: center;
 }
 
-.heroIMG{
-    width: 750px;
-    height: 750px;
-    border: 15px solid var(--secondColor);
+.heroIMG{/*the hero img size and background*/
+    width: 780px;
+    height: 700px;
+    object-fit: cover;
+    border: 15px solid var(--fourthColor);
     border-radius: 50px;
 }
-.img_trend{
-    width:200px;
-    height: 200px;
+.img_trend{/*the img for the trending section*/
+    width:500px;
+    height: 450px;
+    object-fit: cover;
+    border: 15px solid var(--fourthColor);
+    border-radius: 50px;
+    margin-top: -50px;
+    box-shadow: 1px 1px 25px var(--secondColor);
 }
 
-.bbb_trending_content{
-    margin:100px;
-}
-.bbb_trend{
+.trend{/*this focuses on the text of the trending heading*/
     font-family:var(--FF1);
     font-size: 50px;
     color: var(--fourthColor);
-    text-shadow: 2px 2px 3px #e12525;
-
+    text-shadow: -2px -2px 3px #e12525;
+    text-align: center;
 }
-.bar{
+.trend_card{
+     display: flex;
+     align-items: flex-start;
+     gap: 100px;
+}
+
+.trend_recipe_name {
+   font-size: 30px;
+   color:white;
+   font-family:var(--FF1);
+   text-shadow: -2px -2px 3px #e12525;
+}
+.trending_content{
+    margin-left:15px;
+    padding:0;
+    margin-bottom: 50px;
+}
+.reviews{
+    display: flex;
+    gap: 20px;
+}   
+.trend_text{
+    margin-top: -10px;
+    background-color: var(--fourthColor);
+    padding: 60px 200px;
+    border-radius: 50px;
+    border: 1px solid white;
+    box-shadow: 0px 10px 20px var(--fourthColor);
+    text-align: center;
+}
+.review{
+    margin: 10px 0;
+    padding: 30px;
+    font-size: 20px;
+    color: black;
+    border: 1px solid var(--thirdColor);
+    box-shadow: 1px 1px 10px #242124;
+    text-shadow: -1px -1px 2px var(--thirdColor);
+    border-radius: 100px;
+    max-width: 400px;
+    font-family: var(--FF1);
+    background-color: white;
+}
+.bar{/*random bar that separates the content*/
     border: 1px solid var(--fourthColor);
 }
+
+.btn {
+    display: inline-block; 
+    text-align: center;
+    padding: 12px 28px;
+    background-color: var(--mainColor);
+    color: white;
+    font-family: var(--FF2);
+    font-size: 18px;
+    text-decoration: none;         
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--thirdColor);
+    color: var(--fourthColor);
+    transform: translateY(-2px);     
+}
+
+.footer {
+    background-color: #242124;
+    color: white;
+    margin: -8px;
+    padding: 10px;
+
+}
+
+.footer_text{
+    text-align: center;
+    font-family: var(--FF2);
+}
+
+.cookie_table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse; 
+    margin:100px auto 0 auto;
+    background-color: white;
+    font-family: var(--FF1);
+    font-size: 18px;
+    color: var(--fourthColor);
+}
+
+.cookie_table caption {
+    font-family: var(--FF1);
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-shadow: -1px -1px 2px white;
+}
+
+.cookie_table th {
+    background-color: var(--fourthColor);
+    color: white;
+    padding: 12px;
+    border: 1px solid var(--fourthColor);
+}
+
+.cookie_table td {
+    padding: 12px;
+    border: 1px solid var(--fourthColor);
+    text-align: center;
+}
+
+.cookie_table tbody tr:nth-child(even) {
+    background-color: rgb(148, 138, 119);   /* striped rows */
+}
+.bread_table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse; 
+    margin:100px auto 0 auto;
+    background-color: white;
+    font-family: var(--FF1);
+    font-size: 18px;
+    color: var(--fourthColor);
+}
+
+.bread_table caption {
+    font-family: var(--FF1);
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-shadow: -1px -1px 2px white;
+}
+
+.bread_table th {
+    background-color: var(--fourthColor);
+    color: white;
+    padding: 12px;
+    border: 1px solid var(--fourthColor);
+}
+
+.bread_table td {
+    padding: 12px;
+    border: 1px solid var(--fourthColor);
+    text-align: center;
+}
+
+.bread_table tbody tr:nth-child(even) {
+    background-color: rgb(189, 170, 149);   /* striped rows */
+}
+
+.recipe_box{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 10px;
+}
+.recipe{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(148, 138, 119);
+    padding: 20px;
+    border-radius: 40px;
+}
+.recipe_top{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+.recipe_heading{
+    flex:1;
+}
+.recipe_img{
+     width:300px;
+     object-fit:cover;
+     height: 250px;
+     border: 10px solid var(--fourthColor);
+     border-radius: 20px;
+}
+
+.recipe_name{
+    font-family: var(--FF3);
+    font-size: 60px;
+    color:var(--fourthColor);
+    margin: 5px 0 1px 0;
+    font-weight: bolder;
+}
+.prep_tools, h4{
+    font-family: var(--FF1);
+    font-size:40px;
+    margin:0;
+    font-weight: bolder;
+}
+.recipe_info {
+    font-family: var(--FF1);
+    font-size: 30px;
+    color: var(--fourthColor);
+    margin:0 0 5px 0;
+    font-weight: bolder;
+}
+.recipe_card ol,
+.recipe_card ul {
+    font-family: var(--FF1);
+    font-size: 18px;
+    color: black;
+    margin:0;
+}
+
+.recipe_card{
+    display: grid;
+    grid-template-columns: .5fr .5fr 1fr;
+    gap: 2px;
+    align-items: start;
+}
+.last_word{
+    font-family: var(--FF2);
+    font-weight: bolder;
+}
+
+.recipe_bread{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(189, 170, 149);
+    padding: 20px;
+    border-radius: 40px;
+}
+@media screen and (max-width: 1750px ){
+    .main-content{/*This focuses on the main content for the position of the welcome section and the hero image*/
+    margin: 125px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: rgb(237, 237, 230);
+    padding:45px;
+    border-radius: 10px;
+    border:1px solid var(--fourthColor);
+    box-shadow: 0px 1px 10px var(--fourthColor);
+    }
+
+    .mc_header{ /*This focuses on the welcome text in main content */
+    color: var(--fourthColor);
+    font-family: var(--FF2);
+    font-size:50px;
+    text-shadow: -2px -2px 1px #B8A9C9;
+    text-align: center;
+    }
+
+
+    .mc_p{/*this focuses on the the text under the welcome header*/
+        font-family: var(--FF1);
+        color:var(--fourthColor);
+        font-size: 35px;
+        padding:20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .heroIMG{/*the hero img size and background*/
+        width: 600px;
+        height: 450px;
+        border: 15px solid var(--fourthColor);
+        border-radius: 50px;
+    }
+}
+
