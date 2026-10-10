@@ -473,7 +473,7 @@ h3 {
 @media screen and (max-width: 1750px) {
     .main-content {
         /*This focuses on the main content for the position of the welcome section and the hero image*/
-        margin: auto 100px;
+        margin: 100px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
