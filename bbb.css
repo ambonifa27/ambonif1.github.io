@@ -166,11 +166,11 @@ body {
     /*the img for the trending section*/
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 400px;
     object-fit: cover;
     border: 1px solid white;
     border-radius: 50px;
-    margin: 10px 50px 35px;
+    margin: 50px 35px;
     border-radius: 6px;
     box-shadow: 0 0 0 7px var(--fourthColor), 0 0 0 8px white;
     transform: rotate(-4deg);
@@ -205,10 +205,9 @@ body {
 .trending_content {
    background-size: 30px 30px;
    border-radius: 12px;
-   margin: -50px 0 50px;
+   margin: 30px 50px;
    padding: 30px 20px 40px;
    letter-spacing: 5px;
-   
 }
 
 .reviews {
@@ -217,7 +216,7 @@ body {
 }
 
 .trend_text {
-    margin-top: -10px;
+    margin-top: 50px;
     background-color: var(--fourthColor);
     padding: 60px 200px;
     border-radius: 6px;
@@ -373,7 +372,7 @@ table th{
 }
 
 .prep_tools,
-h3 {
+h2 {
     font-family: var(--FF1);
     font-size: 40px;
     margin: 0;
@@ -473,7 +472,7 @@ h3 {
 @media screen and (max-width: 1750px) {
     .main-content {
         /*This focuses on the main content for the position of the welcome section and the hero image*/
-        margin: auto 100px;
+        margin: 100px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -637,12 +636,3 @@ h3 {
     }
 }
 
-/* hides text visually but keeps it for screen readers and search engines */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-}
