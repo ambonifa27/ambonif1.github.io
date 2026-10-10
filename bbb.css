@@ -511,6 +511,66 @@ h2 {
         border: 15px solid var(--fourthColor);
         border-radius: 50px;
     }
+    .trending_content {
+    border-radius: 12px;
+    margin: 30px clamp(10px, 3vw, 50px);
+    padding: 30px 20px 40px;
+    letter-spacing: clamp(1px, 0.3vw, 5px);   /* shrinks with the screen */
+}
+
+.trend_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;           
+    gap: 30px;
+}
+
+
+.img_trend {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto;
+    object-fit: cover;
+    border: 1px solid white;
+    border-radius: 6px;
+    box-shadow: 0 0 0 7px var(--fourthColor), 0 0 0 8px white;
+    transform: rotate(-4deg);
+}
+
+.trend_text { 
+    max-width: 1000px;
+    margin: 50px 30px;
+    padding: 20px 80px;  
+    background-color: var(--fourthColor);
+    border: 1px solid white;
+    border-radius: 6px;
+    box-shadow: 0 0 0 7px var(--fourthColor), 0 0 0 8px white;
+    text-align: center;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;           
+    justify-content: center;
+    gap: 20px;
+}
+
+.review {
+    flex: 1 1 240px;
+    max-width: 400px;
+    margin: 10px 0;
+    padding: 20px;
+    font-size: 20px;
+    color: black;
+    border: 0;
+    box-shadow: 1px 1px 10px #242124;
+    border-radius: 6px;
+    font-family: var(--FF1);
+    background-color: white;
+}
+
 }
 
 
